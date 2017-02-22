@@ -12,16 +12,17 @@ void main()
 	// Delcaration of variables
 	int minNumber, maxNumber, guess, actualNumber, range
 
+	srand(time(NULL));
 	// Input/output for the guess
     cout << "Please enter min and max range";
     cin >> minNumber maxNumber;
 
-	if (minNumber maxNumber)
-	{
+if cin >> maxNumber minNumber
+{
     cout << "Guess the number";
     cin >> guess;
 
-    actualNumber = rand()
+    int actualNumber = rand() % 100;
     // If statement to see if guess is correct
 	if (guess == actualNumber)
 	{
@@ -32,6 +33,6 @@ void main()
 			cout << "Wrong! The number was" << actualNumber << ",you were off by" << range;
 		}
 
-	}
+}
 
 }
