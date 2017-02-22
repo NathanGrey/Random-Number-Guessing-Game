@@ -1,3 +1,4 @@
+Random Number Guessing Game
 Description
 You will be writing an interactive guessing game. This will build on concepts from Assignment 2.1, but we will be utilizing rand() and srand() to make it more fun. You'll use Visual Studio to create a new project. As well as use Visual Studio to code, edit, and build this assignment.
 
