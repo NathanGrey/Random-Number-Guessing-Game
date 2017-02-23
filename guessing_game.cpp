@@ -10,19 +10,27 @@ using namespace std;
 void main()
 {
 	// Delcaration of variables
-	int minNumber, maxNumber, guess, actualNumber, range
+	int minNumber, maxNumber, guess, actualNumber, range;
 
 	srand(time(NULL));
 	// Input/output for the guess
-    cout << "Please enter min and max range";
-    cin >> minNumber maxNumber;
+    cout << "Please enter min and max range.";
+    cin >> minNumber >> maxNumber;
 
-if cin >> maxNumber minNumber
+// If statement to check if numbers are entered in order
+if (minNumber > maxNumber)
 {
-    cout << "Guess the number";
+	cout << "Incorrect input: The range input needs to be in order of MIN then MAX.";
+}
+	// Else if statement to ensure order is correct
+	else if (minNumber < maxNumber)
+	{
+    cout << "Guess the number.";
     cin >> guess;
-
-    int actualNumber = rand() % 100;
+	}
+    // Calulates the random number and the difference between the guess
+    actualNumber = rand() % 100;
+    range = (actualNumber - guess);
     // If statement to see if guess is correct
 	if (guess == actualNumber)
 	{
@@ -31,15 +39,11 @@ if cin >> maxNumber minNumber
 		else
 		{
 			cout << "Wrong! The number was" << actualNumber << ",you were off by" << range;
-		}
-
+	}
+		// Ends the program once the game is over
+		system ("pause");
 }
 
-}
-
-if (num1>=num2)
-  cout<<num1<<endl;
-  else if (num2>=num1)
-  cout<<num2<<endl;
-return 0;
-} 
+/* Bug Notes
+-
+*/
