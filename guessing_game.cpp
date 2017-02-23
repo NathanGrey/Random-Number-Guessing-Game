@@ -12,7 +12,6 @@ void main()
 	// Delcaration of variables
 	int minNumber, maxNumber, guess, actualNumber, range;
 
-	srand(time(NULL));
 	// Input/output for the guess
     cout << "Please enter min and max range.";
     cin >> minNumber >> maxNumber;
@@ -29,7 +28,9 @@ if (minNumber > maxNumber)
     cin >> guess;
 	}
     // Calulates the random number and the difference between the guess
-    actualNumber = rand() % 100;
+    srand(time(0));
+    actualNumber = rand() % 100 + 1;
+
     range = (actualNumber - guess);
     // If statement to see if guess is correct
 	if (guess == actualNumber)
@@ -40,6 +41,7 @@ if (minNumber > maxNumber)
 		{
 			cout << "Wrong! The number was" << actualNumber << ",you were off by" << range;
 	}
+	return 0;
 		// Ends the program once the game is over
 		system ("pause");
 }
