@@ -9,8 +9,9 @@ using namespace std;
 
 void main()
 {
-	// Delcaration of variables
+	// Declaration of variables
 	int minNumber, maxNumber, guess, actualNumber, range1, range2;
+	// Seeds the random number to make it actually random
 	srand(time(0));
 
 	// Input/output for the guess
@@ -23,24 +24,24 @@ void main()
 		cout << "Guess the number. \n";
 		cin >> guess;
 	}
-	// Else if statement to ensure order is correct
+	// Else if statement for the input order being incorrect
 	else if (minNumber > maxNumber)
 	{
 		cout << "Incorrect input: The range input needs to be in order of MIN then MAX. \n";
 		system("pause");
 		return;
 	}
-		// If statement to see if guess is correct
-	
+		// Calculations for the number range and how to determine which formula to use for the range so that no negative values are given
 		actualNumber = rand() % 100 + 1;
 		range1 = (actualNumber - guess);
 		range2 = (guess - actualNumber);
 
+		// If statement to see if guess is correct
 		if (guess == actualNumber) 
 		{
 			cout << "How did you do that? You must be a robot. \n";
 		}
-
+		// Else if to see if the guess is incorrect with nested if statement to check which range integer to use
 		else if (guess != actualNumber)
 			if (actualNumber > guess)
 			{
@@ -56,7 +57,7 @@ void main()
 }
 
 /* Bug Notes
--Build errors occured because integers were being called for befor they were declared. Changed the order of statements.
+-Build errors occurred because integers were being called for before they were declared. Changed the order of statements.
 -Program was running after the input was incorrect. Added a system pause and made the program end afterwards.
 -cout was jumbled up. Added in extra spaces and line breaks for readability.
 -Was getting negative values for how far off the numbers were. Added in an if statement to fix that.
