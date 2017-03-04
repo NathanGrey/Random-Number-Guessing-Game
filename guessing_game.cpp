@@ -32,7 +32,7 @@ void main()
 		return;
 	}
 	// Calculations for the number range and how to determine which formula to use for the range so that no negative values are given
-	actualNumber = rand() % (maxNumber - minNumber) + min; // Makes random number between min and max range
+	actualNumber = rand() % (maxNumber - minNumber) + minNumber; // Makes random number between min and max range
 	range1 = (actualNumber - guess);
 	range2 = (guess - actualNumber);
 
