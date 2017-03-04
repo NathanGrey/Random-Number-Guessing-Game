@@ -7,7 +7,7 @@
 // This eliminates the need to write std::cout so it can just be cout
 using namespace std;
 
-void main()
+int main()
 {
 	// Declaration of variables
 	int minNumber, maxNumber, guess, actualNumber, range1, range2;
@@ -29,7 +29,6 @@ void main()
 	{
 		cout << "Incorrect input: The range input needs to be in order of MIN then MAX. \n";
 		system("pause");
-		return;
 	}
 	// Calculations for the number range and how to determine which formula to use for the range so that no negative values are given
 	actualNumber = rand() % (maxNumber - minNumber) + minNumber; // Makes random number between min and max range
@@ -63,3 +62,4 @@ void main()
 -Was getting negative values for how far off the numbers were. Added in an if statement to fix that.
 -Named the project wrong. Renamed and made a new project for it so there weren't duplicate files.
 */
+
