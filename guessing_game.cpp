@@ -55,11 +55,14 @@ int main()
 	system("pause");
 }
 
-/* Bug Notes
--Build errors occurred because integers were being called for before they were declared. Changed the order of statements.
--Program was running after the input was incorrect. Added a system pause and made the program end afterwards.
--cout was jumbled up. Added in extra spaces and line breaks for readability.
--Was getting negative values for how far off the numbers were. Added in an if statement to fix that.
--Named the project wrong. Renamed and made a new project for it so there weren't duplicate files.
-*/
+/* 	==================================================[ BUG NOTES ]========================================================
+
+1. Build errors occurred because integers were being called for before they were declared. Changed the order of statements.
+2. Program was running after the input was incorrect. Added a system pause and made the program end afterwards.
+3. cout was jumbled up. Added in extra spaces and line breaks for readability.
+4. Was getting negative values for how far off the numbers were. Added in an if statement to fix that.
+5. Named the project wrong. Renamed and made a new project for it so there weren't duplicate files.
+6. Range calculation was off so random number was not within the inputed range. Fixed the calculation.
+
+========================================================================================================================== */
 
